@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Bangla Cultural Explorer</title>
+
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="app">
+<aside class="sidebar">
+  <div class="logo"><div class="logo-flower">🌺</div><div><h1>Bangla<br>Cultural Explorer</h1><p>LITERATURE • LANGUAGE • HERITAGE</p></div></div>
+  <nav class="nav">
+    <button class="active" data-section="home"><span class="ico">⌂</span><span>Home</span></button>
+    <button data-section="literature"><span class="ico">▣</span><span>Literature</span></button>
+    <button data-section="words"><span class="ico">❧</span><span>Cultural Words</span></button>
+    <button data-section="textiles"><span class="ico">▧</span><span>Textiles</span></button>
+    <button data-section="food"><span class="ico">♨</span><span>Food</span></button>
+    <button data-section="regions"><span class="ico">●</span><span>Regions</span></button>
+    <button data-section="about"><span class="ico">i</span><span>About</span></button>
+  </nav>
+  <div class="quote">“Amar sonar<br>Bangla, ami tomay<br>bhalobashi...”</div>
+</aside>
+
+<div class="content">
+<header class="topbar">
+  <nav class="topnav">
+    <a class="active" href="#home">Home</a><a href="#literature" onclick="openExplore('literature');return false;">Literature</a><a href="#words" onclick="openExplore('words');return false;">Cultural Words</a><a href="#textiles" onclick="openExplore('textiles');return false;">Textiles</a><a href="#food" onclick="openExplore('food');return false;">Food</a><a href="#regions" onclick="openExplore('regions');return false;">Regions</a><a href="#about">About</a>
+  </nav>
+  <div class="search">⌕ <input id="searchInput" placeholder="Search..." aria-label="Search"></div>
+</header>
+
+<main class="main">
+<section class="hero">
+  <div>
+    <h2>Explore the Soul of<br>Bangla Culture</h2>
+    <p>Discover the stories, words, traditions and timeless beauty of Bangladesh through a digital archive.</p>
+    <button class="btn" onclick="document.getElementById('categories').scrollIntoView({behavior:'smooth'})">Start Exploring →</button>
+  </div>
+  <div class="hero-art">🛶 🌳</div>
+</section>
+
+<div class="container">
+<h2 class="section-title" id="categories">✣ &nbsp;Featured Categories</h2>
+<div class="grid" id="cards">
+  <article class="card searchable" data-category="literature" data-keywords="literature poetry novels folk stories">
+    <div class="card-img lit">📖 🌺</div><div class="card-body"><h3>Literature</h3><p>Poetry, novels, folk tales & more</p><button class="smallbtn" onclick="openExplore('literature')">Explore →</button></div>
+  </article>
+  <article class="card searchable" data-category="words" data-keywords="cultural words bangla language rare regional vocabulary">
+    <div class="card-img words">📜 🌿</div><div class="card-body"><h3>Cultural Words</h3><p>Rare and beautiful Bangla words</p><button class="smallbtn" onclick="openExplore('words')">Explore →</button></div>
+  </article>
+  <article class="card searchable" data-category="textiles" data-keywords="textiles jamdani crafts fabric nakshi">
+    <div class="card-img textile">🧵</div><div class="card-body"><h3>Textiles</h3><p>Traditional fabrics & crafts</p><button class="smallbtn" onclick="openExplore('textiles')">Explore →</button></div>
+  </article>
+  <article class="card searchable" data-category="food" data-keywords="food pitha rice fish recipes cuisine">
+    <div class="card-img food">🍲</div><div class="card-body"><h3>Food</h3><p>Traditional cuisine & recipes</p><button class="smallbtn" onclick="openExplore('food')">Explore →</button></div>
+  </article>
+  <article class="card searchable" data-category="regions" data-keywords="regions river bengal villages landscape">
+    <div class="card-img region">🛶 🌾</div><div class="card-body"><h3>Regions</h3><p>Explore the diversity of Bangladesh</p><button class="smallbtn" onclick="openExplore('regions')">Explore →</button></div>
+  </article>
+  <article class="card searchable" data-category="folk" data-keywords="folk traditions music dance festivals alpana">
+    <div class="card-img folk">🎭 🐯</div><div class="card-body"><h3>Folk Traditions</h3><p>Music, dance, festivals & more</p><button class="smallbtn" onclick="openExplore('folk')">Explore →</button></div>
+  </article>
+</div>
+
+
+<section id="explorePanel" class="explore-panel hidden">
+  <div class="explore-head">
+    <div>
+      <div class="eyebrow">DIGITAL ARCHIVE</div>
+      <h2 id="exploreTitle">Explore Bangla Culture</h2>
+      <p id="exploreIntro"></p>
+    </div>
+    <button class="backbtn" onclick="closeExplore()">← Back to categories</button>
+  </div>
+  <div id="exploreItems" class="explore-items"></div>
+</section>
+
+<div class="lower">
+<section>
+<h2 class="section-title">✣ &nbsp;Latest from the Archive <span style="float:right;font:10px DM Sans;color:#547069">View All →</span></h2>
+<div class="archive">
+  <article class="card searchable" data-keywords="rabindranath tagore poetry modern era">
+    <div class="card-img lit">🪶</div><div class="card-body"><h3>রবীন্দ্রনাথ ঠাকুর</h3><p>Poetry · Modern Era</p><p>“প্রকৃতির সঙ্গে মানুষের যে চিরন্তন সম্পর্ক...”</p><a href="#" style="font-size:10px;color:#31584f">Read More →</a></div>
+  </article>
+  <article class="card searchable" data-keywords="muktijuddher dinoli liberation war poetry history">
+    <div class="card-img region">🇧🇩</div><div class="card-body"><h3>মুক্তিযুদ্ধের দিনগুলি</h3><p>Poetry · Liberation Era</p><p>“স্বাধীনতার আকাঙ্ক্ষা, মানুষের সংগ্রাম...”</p><a href="#" style="font-size:10px;color:#31584f">Read More →</a></div>
+  </article>
+  <article class="card searchable" data-keywords="bangali loksahitya folk literature regional">
+    <div class="card-img folk">🎨</div><div class="card-body"><h3>বাঙালি লোকসাহিত্য</h3><p>Folk Literature · Regional</p><p>লোককথা, গান, পালাগান এবং জীবনের গল্প...</p><a href="#" style="font-size:10px;color:#31584f">Read More →</a></div>
+  </article>
+</div>
+
+<div class="cta">
+ <div><h3>❧ Explore. Learn. Preserve.</h3><p>This project is an open resource for students, teachers, researchers and anyone who loves Bangla culture.</p></div>
+ <div class="links"><button class="smallbtn" style="background:#155b4d;color:#fff;border:0;border-radius:14px;padding:8px 12px;font-size:10px" onclick="alert('Contribution form coming soon!')">Contribute a Word</button><a href="#">⌘ View on GitHub</a></div>
+</div>
+</section>
+
+<aside>
+<div class="analysis">
+<h3>♧ &nbsp;Text Analysis</h3>
+<textarea id="textInput">নদীর পাড়ে বসে আছি, মনে পড়ে যায় শৈশবের সেই দিনগুলি। আকাশটা যেমন, মাটিতে ধান, আর দূরে ভেসে আসে বাঁশির সুর।</textarea>
+<button class="analyze" onclick="analyzeText()">Analyze Text</button>
+<div class="stats"><div class="stat-title">♧ Most Frequent Words</div><div class="words-list" id="wordsList"></div></div>
+<div class="stats"><div class="stat-title">♧ Theme Distribution</div><div class="donut"></div><div class="legend"><span>Nature 35%</span><span>Emotion 25%</span><span>Rural Life 20%</span><span>Identity 20%</span></div></div>
+<div class="wordday"><div class="stat-title">♧ Word of the Day</div><strong>পাট</strong> <small>পাট</small><p style="font-size:10px;line-height:1.45">Jute (a traditional crop and important part of rural life and economy).</p><small>Region: Bengal (rural areas)</small></div>
+</div>
+</aside>
+</div>
+</div>
+</main>
+<footer class="footer"><span>Bangla Cultural Explorer &nbsp;|&nbsp; Built with ♥ for our heritage</span><span>বাংলা ভাষা, বাংলা সংস্কৃতি, আমাদের গর্ব</span></footer>
+</div>
+
+
+  <script src="script.js"></script>
+</body>
+</html>

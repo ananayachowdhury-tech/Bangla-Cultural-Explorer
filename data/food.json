@@ -1,0 +1,24 @@
+{
+  "title": "Food",
+  "intro": "Discover food traditions through ingredients, seasons, regions and family memories.",
+  "items": [
+    [
+      "🍚",
+      "ভাত ও মাছ",
+      "Everyday Food · Bengal",
+      "Rice and fish form an important part of everyday Bengali food culture."
+    ],
+    [
+      "🥞",
+      "পিঠা",
+      "Winter Tradition · Bengal",
+      "Seasonal rice-based foods made in many regional shapes and styles."
+    ],
+    [
+      "🥭",
+      "আম",
+      "Fruit · Summer",
+      "Mangoes appear in fresh, sweet and savory preparations across Bangladesh."
+    ]
+  ]
+}

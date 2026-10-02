@@ -1,0 +1,24 @@
+{
+  "title": "Folk Traditions",
+  "intro": "Explore music, visual traditions, festivals and community practices.",
+  "items": [
+    [
+      "🎨",
+      "আলপনা",
+      "Visual Art · Festival",
+      "Hand-drawn motifs used to decorate spaces during celebrations."
+    ],
+    [
+      "🎵",
+      "বাউল গান",
+      "Music · Folk Tradition",
+      "A distinctive musical tradition centered on spiritual and philosophical expression."
+    ],
+    [
+      "🎭",
+      "যাত্রা",
+      "Theatre · Folk Tradition",
+      "A popular Bengali folk-theatre form combining storytelling, music and performance."
+    ]
+  ]
+}

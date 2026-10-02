@@ -1,0 +1,93 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Noto+Serif+Bengali:wght@500;600;700&display=swap');
+
+:root{
+  --cream:#f8f5e9; --paper:#fffdf7; --ink:#173f38; --muted:#68756f;
+  --green:#155b4d; --red:#b52b24; --gold:#c28a22; --purple:#7150a7;
+  --line:#dddccf; --shadow:0 8px 24px rgba(28,55,47,.08);
+}
+*{box-sizing:border-box}
+body{margin:0;background:var(--cream);color:#263c36;font-family:"DM Sans",sans-serif}
+button,input,textarea{font:inherit}
+button{cursor:pointer}
+.app{min-height:100vh;display:grid;grid-template-columns:225px 1fr}
+.sidebar{position:fixed;left:0;top:0;bottom:0;width:225px;background:#fbf9ef;border-right:1px solid #e5e2d6;padding:16px;z-index:5}
+.logo{height:82px;border:1px solid #e5e1d4;border-radius:9px;background:#fffdf6;display:flex;align-items:center;gap:10px;padding:10px;margin-bottom:25px}
+.logo-flower{font-size:36px}
+.logo h1{font-family:"Noto Serif Bengali",serif;color:#7e2722;font-size:20px;line-height:1;margin:0}
+.logo p{font-size:8px;letter-spacing:.5px;margin:7px 0 0;color:#65716c}
+.nav{display:flex;flex-direction:column;gap:7px}
+.nav button{border:0;background:transparent;text-align:left;padding:12px 10px;border-radius:7px;color:#31574e;display:flex;gap:14px;align-items:center;font-weight:500}
+.nav button:hover,.nav button.active{background:#f0eee3}
+.nav .ico{width:20px;text-align:center;font-size:18px}
+.quote{position:absolute;left:17px;right:17px;bottom:75px;border-left:2px solid #a7bcae;padding:8px 10px;font-family:"Noto Serif Bengali",serif;font-style:italic;color:#49645c;font-size:12px;line-height:1.5}
+.content{grid-column:2;min-width:0}
+.topbar{height:68px;background:#fffdf8;border-bottom:1px solid #e6e2d7;display:flex;align-items:center;padding:0 26px;gap:28px;position:sticky;top:0;z-index:4}
+.topnav{display:flex;gap:30px;flex:1;justify-content:center}
+.topnav a{color:#3f4945;text-decoration:none;font-size:13px}
+.topnav a.active{color:#a72b25;border-bottom:2px solid #b52b24;padding-bottom:8px}
+.search{width:220px;border:1px solid #d9d8ce;border-radius:20px;background:#fff;padding:8px 12px;display:flex;align-items:center;gap:7px}
+.search input{border:0;outline:0;width:100%;background:transparent;font-size:12px}
+.main{padding:0 0 70px}
+.hero{margin:0 0 24px;background:linear-gradient(100deg,#faf4dd,#e9e4c7 58%,#d8e4c9);height:212px;display:flex;align-items:center;position:relative;overflow:hidden;padding:30px 60px}
+.hero:after{content:"";position:absolute;right:-50px;bottom:-80px;width:520px;height:260px;border-radius:50%;background:radial-gradient(circle at 45% 30%,#df3427 0 18%,transparent 19%),linear-gradient(160deg,transparent 0 45%,#76945f 46% 60%,transparent 61%),linear-gradient(180deg,transparent 0 70%,#b3c6a0 71% 100%);opacity:.95}
+.hero-art{position:absolute;right:180px;bottom:-12px;font-size:100px;filter:saturate(.8)}
+.hero h2{font-family:"Noto Serif Bengali",serif;color:#164d43;font-size:30px;line-height:1.15;margin:0 0 8px;max-width:430px;position:relative;z-index:2}
+.hero p{color:#56716a;font-size:13px;max-width:390px;line-height:1.5;position:relative;z-index:2}
+.btn{border:0;border-radius:18px;background:var(--green);color:white;padding:9px 16px;font-size:12px}
+.container{max-width:1040px;margin:auto;padding:0 22px}
+.section-title{font-family:"Noto Serif Bengali",serif;font-size:18px;color:#224d43;margin:16px 0 13px}
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.card{background:var(--paper);border:1px solid #e0ddd1;border-radius:10px;overflow:hidden;box-shadow:0 2px 5px rgba(0,0,0,.02)}
+.card-img{height:93px;display:flex;align-items:center;justify-content:center;font-size:45px;position:relative;overflow:hidden}
+.card-img.lit{background:linear-gradient(135deg,#ead9bd,#b48a62)}
+.card-img.words{background:linear-gradient(135deg,#d8c19e,#806044)}
+.card-img.textile{background:repeating-linear-gradient(45deg,#693e43 0 12px,#c67d62 12px 24px,#d9b174 24px 36px)}
+.card-img.food{background:linear-gradient(135deg,#6e5b38,#d0a85d)}
+.card-img.region{background:linear-gradient(180deg,#b9d5d4,#6b9b8b 62%,#b9aa78 63%)}
+.card-img.folk{background:linear-gradient(135deg,#7b3328,#d19b47,#315d54)}
+.card-body{padding:11px 13px 14px}
+.card h3{font-family:"Noto Serif Bengali",serif;color:#34564d;margin:0 0 3px;font-size:16px}
+.card p{font-size:11px;color:#7a817b;margin:0 0 10px}
+.card .smallbtn{border:0;color:white;border-radius:14px;padding:7px 13px;font-size:10px;background:var(--green)}
+.card:nth-child(1) .smallbtn{background:#b51f22}.card:nth-child(4) .smallbtn{background:#c08b22}.card:nth-child(3) .smallbtn{background:#7250a7}.card:nth-child(5) .smallbtn{background:#3579bc}
+.lower{display:grid;grid-template-columns:1fr 285px;gap:18px;margin-top:20px}
+.archive{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+.archive .card-img{height:82px;filter:grayscale(.55)}
+.analysis{background:#fffdf7;border:1px solid #dedcd1;border-radius:10px;padding:14px}
+.analysis h3{font-family:"Noto Serif Bengali",serif;color:#31584f;font-size:15px;margin:0 0 10px}
+textarea{width:100%;height:76px;resize:none;border:1px solid #dddacf;border-radius:8px;padding:9px;background:white;font-family:"Noto Serif Bengali",serif;font-size:13px;outline:none}
+.analyze{margin-top:8px;width:100%;border:0;border-radius:15px;background:#165d4e;color:#fff;padding:8px;font-size:11px}
+.stats{margin-top:13px}
+.stat-title{font-size:11px;font-weight:700;color:#41635a;margin-bottom:7px}
+.words-list{display:flex;flex-direction:column;gap:5px}
+.word{display:flex;justify-content:space-between;font-family:"Noto Serif Bengali",serif;font-size:13px;border-bottom:1px solid #eee9dc;padding-bottom:3px}
+.word span:last-child{font-family:"DM Sans";color:#7b817d}
+.donut{width:105px;height:105px;border-radius:50%;margin:9px auto;background:conic-gradient(#5b9b77 0 35%,#d95452 35% 60%,#e7a529 60% 80%,#7752a7 80% 100%);position:relative}
+.donut:after{content:"";position:absolute;inset:27px;background:#fffdf7;border-radius:50%}
+.legend{font-size:10px;display:grid;grid-template-columns:1fr 1fr;gap:5px}
+.legend span:before{content:"";display:inline-block;width:8px;height:8px;border-radius:2px;background:#5b9b77;margin-right:5px}.legend span:nth-child(2):before{background:#d95452}.legend span:nth-child(3):before{background:#e7a529}.legend span:nth-child(4):before{background:#7752a7}
+.wordday{margin-top:14px;border-top:1px solid #e4e0d5;padding-top:13px}
+.wordday strong{font-family:"Noto Serif Bengali";font-size:27px;color:#31584f}
+.cta{margin-top:18px;background:linear-gradient(90deg,#fff0ee,#fffaf2);border:1px solid #ead8d0;border-radius:10px;padding:14px 18px;display:flex;align-items:center;justify-content:space-between;gap:15px}
+.cta h3{margin:0 0 3px;font-family:"Noto Serif Bengali";color:#a52b25;font-size:14px}.cta p{margin:0;font-size:10px;color:#747873}
+.cta .links{display:flex;gap:9px;align-items:center}.cta a{font-size:10px;color:#31584f}
+.footer{position:fixed;bottom:0;left:0;right:0;background:#154e43;color:#fff;padding:8px 20px;font-size:9px;display:flex;justify-content:space-between;z-index:8}
+.hidden{display:none!important}
+@media(max-width:950px){.topnav{gap:13px}.search{width:170px}.hero{padding-left:35px}.lower{grid-template-columns:1fr}.analysis{max-width:none}}
+@media(max-width:760px){.app{display:block}.sidebar{position:relative;width:100%;height:auto;padding:8px;display:flex;align-items:center;gap:10px}.logo{width:190px;margin:0;height:58px}.logo-flower{font-size:27px}.logo h1{font-size:15px}.nav{flex-direction:row;overflow:auto}.nav button{padding:8px}.nav button span:last-child{display:none}.quote{display:none}.content{width:100%}.topbar{padding:8px 12px;height:auto}.topnav{display:none}.search{margin-left:auto}.hero{height:250px;padding:25px}.hero h2{font-size:25px}.hero-art{right:-20px;opacity:.65}.grid{grid-template-columns:1fr 1fr}.lower{display:block}.analysis{margin-top:18px}.archive{grid-template-columns:1fr}.footer{font-size:8px}}
+@media(max-width:470px){.grid{grid-template-columns:1fr}.hero{height:235px}.hero h2{max-width:290px}.container{padding:0 13px}}
+
+.explore-panel{margin-top:24px;background:#fffdf7;border:1px solid #dedbd0;border-radius:12px;padding:20px;box-shadow:var(--shadow)}
+.explore-panel .eyebrow{font-size:9px;letter-spacing:1.5px;color:#a52b25;font-weight:700;margin-bottom:5px}
+.explore-head{display:flex;justify-content:space-between;gap:20px;align-items:flex-start;margin-bottom:16px}
+.explore-head h2{font-family:"Noto Serif Bengali",serif;color:#214f45;font-size:25px;margin:0 0 4px}
+.explore-head p{margin:0;color:#6d7772;font-size:12px;line-height:1.5;max-width:620px}
+.backbtn{border:1px solid #d5d4c9;background:#f8f5e9;color:#31584f;border-radius:16px;padding:8px 12px;font-size:10px}
+.explore-items{display:grid;grid-template-columns:repeat(3,1fr);gap:13px}
+.explore-item{border:1px solid #e3dfd3;background:#fff;border-radius:9px;padding:14px}
+.explore-item .symbol{font-size:24px;margin-bottom:6px}
+.explore-item h3{font-family:"Noto Serif Bengali",serif;color:#31584f;margin:0 0 5px;font-size:16px}
+.explore-item p{font-family:"Noto Serif Bengali",serif;color:#606d67;font-size:12px;line-height:1.6;margin:0}
+.explore-item .meta{font-family:"DM Sans";font-size:9px;color:#9a6d2a;margin-top:9px}
+@media(max-width:760px){.explore-head{display:block}.backbtn{margin-top:12px}.explore-items{grid-template-columns:1fr 1fr}}
+@media(max-width:470px){.explore-items{grid-template-columns:1fr}}

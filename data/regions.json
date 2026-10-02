@@ -1,0 +1,24 @@
+{
+  "title": "Regions",
+  "intro": "Map cultural diversity through landscapes, language, food, crafts and local traditions.",
+  "items": [
+    [
+      "🛶",
+      "River Bengal",
+      "Rivers · Rural Life",
+      "Rivers shape transportation, livelihoods, landscapes and stories."
+    ],
+    [
+      "🌊",
+      "Chattogram",
+      "Southeast Bangladesh",
+      "A coastal and hilly region with distinctive food, language and cultural traditions."
+    ],
+    [
+      "🌳",
+      "Sundarbans",
+      "Southwest Bangladesh",
+      "A mangrove landscape connected to local livelihoods, wildlife and environmental heritage."
+    ]
+  ]
+}
